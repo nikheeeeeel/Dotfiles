@@ -1,0 +1,56 @@
+{
+    "position": "bottom",
+    "margin-bottom": 8,
+    "margin-left": 200,
+    "margin-right": 200,
+    "height": 40,
+    "modules-center": [
+        "clock",
+        "custom/media",
+        "hyprland/workspaces",
+        "wireplumber",
+        "network",
+        "battery"
+    ],
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip": false
+    },
+    "custom/media": {
+        "exec": "~/.config/waybar/scripts/media.sh",
+        "interval": 2,
+        "return-type": "json",
+        "escape": true
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "{essid}",
+        "format-disconnected": "No Internet",
+        "format-ethernet": "ethernet",
+        "tooltip": true
+    },
+    "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "{capacity}%",
+    "tooltip": false,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    }
+}
+}

@@ -1,0 +1,109 @@
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-center {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 999px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Clock ───────────────────────────────────────────── */
+#clock {
+    color: #909090;
+    font-weight: 600;
+    padding: 0 14px 0 6px;
+    letter-spacing: 0.03em;
+}
+
+/* ── Media ───────────────────────────────────────────── */
+#custom-media {
+    color: #606060;
+    padding: 0 10px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ── Workspaces ──────────────────────────────────────── */
+#workspaces {
+    padding: 4px 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #4a4a4a;
+    min-width: 26px;
+    padding: 2px 6px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #707070;
+}
+
+#workspaces button.active {
+    background: rgba(255, 255, 255, 0.10);
+    color: #b0b0b0;
+    font-weight: 700;
+    padding: 2px 10px;
+}
+
+#workspaces button.urgent {
+    background: rgba(160, 80, 80, 0.25);
+    color: #a06060;
+}
+
+/* ── Wireplumber / Volume ────────────────────────────── */
+#wireplumber {
+    color: #606060;
+    padding: 0 8px;
+    font-size: 15px;
+}
+
+#wireplumber.muted {
+    color: #3a3a3a;
+}
+
+/* ── Network ─────────────────────────────────────────── */
+#network {
+    color: #606060;
+    padding: 0 8px;
+    font-size: 15px;
+}
+
+#network.disconnected {
+    color: #3a3a3a;
+}
+
+/* ── Battery ─────────────────────────────────────────── */
+#battery {
+    color: #606060;
+    padding: 0 6px 0 8px;
+    font-size: 15px;
+}
+
+#battery.warning {
+    color: #7a7050;
+}
+
+#battery.critical {
+    color: #804040;
+}
+
+#battery.charging {
+    color: #507070;
+}
