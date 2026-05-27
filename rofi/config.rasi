@@ -1,0 +1,102 @@
+configuration {
+    font: "iMWritingMono Nerd Font 12";
+    show-icons: true;
+}
+
+
+window {
+    width:            25%;
+    background-color: #000000cc; /* Catppuccin Mocha Base */
+    border:           2px;
+    border-color:     #000000; /* Lavender Accent */
+    border-radius:    8px;
+    padding:          20px;
+}
+
+mainbox {
+	enabled:            true;
+	spacing:            0px;
+	margin:             0px;
+	padding:            0px;
+	border:             0px;
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    margin:             0px;
+    padding:            0px;
+    border:             0px;
+    lines:      1;
+    spacing:    5px;
+    scrollbar:  false;
+    border:       0px; 
+	border-color: transparent;
+
+}
+
+element {
+    background-color: transparent;
+    text-color:       #ffffff; /* Catppuccin Text */
+    padding:          8px;
+    border-radius:    6px;
+}
+
+element selected {
+    background-color: #313244; /* Surface0 (Highlight) */
+    text-color:       #cba6f7; /* Lavender */
+}
+
+element-icon {
+	padding: 0 10px 0 0;
+}
+
+/* Target EVERYTHING to make sure the stripes die */
+element normal.normal,
+element normal.urgent,
+element normal.active,
+element alternate.normal,
+element alternate.urgent,
+element alternate.active {
+    background-color: transparent;
+    text-color:       #cdd6f4;
+}
+
+/* Now just define the highlight */
+element selected.normal,
+element selected.urgent,
+element selected.active {
+    background-color: #242424cc; /* Surface0 */
+    text-color:       #ffffff; /* Lavender */
+    border-radius:    6px;
+}
+
+inputbar {
+    enabled:            true;
+    spacing:            10px;
+    margin:             0px 0px 10px 0px;
+    padding:            8px 12px;
+    border-radius:      6px;
+    background-color:   #242424cc;
+    text-color:         #ffffff; /* Catppuccin Text */
+    children:           [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:            false;
+    background-color:   #242424cc; /* Surface0 */
+    text-color:         #ffffff; /* Lavender Accent */
+    padding:            6px 12px;
+    border-radius:      6px;
+}
+
+entry {
+    enabled:            true;
+    background-color:   transparent;
+    text-color:         inherit;
+    cursor:             text;
+    placeholder:        "Search...";
+    placeholder-color:  #242424cc; /* Surface2 */
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
